@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div  style="align-items:center;background-color:brown; height: 50px" >
+        <p style="color:white;">Welcome to .net core training</p>
+    </div>
+    <div class="container" style="background-color:beige;margin-top:10px; height:fit-content()">
+        @RenderBody()
+    </div>
+    @if (IsSectionDefined("Scripts")) { 
+        @RenderSection("Scripts", required: true)
+    }
+</body>
+</html>

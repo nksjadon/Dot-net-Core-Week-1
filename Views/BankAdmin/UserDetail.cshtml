@@ -1,0 +1,20 @@
+﻿@model BankUser
+    <div style="padding:10px">
+        <a asp-controller="bankadmin" asp-action="index" class="btn btn-primary">Go Back</a>
+        <div class="card-deck">
+            <div class="card m-3">
+                <div class="card-header">
+                    <h3>@Model.userName</h3>
+
+                </div>
+                <div class="card-footer text-center">
+                    <h4>@Model.userId</h4>
+                    <h4>@Model.userName</h4>
+                    <h4>@Model.userAccountNumber</h4>
+                    <h4>@Model.userAccountBalance</h4>
+                    <h4>@Model.userAddress</h4>
+                </div>
+
+            </div>
+        </div>
+        </div>

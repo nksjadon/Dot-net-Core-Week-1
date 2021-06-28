@@ -1,0 +1,33 @@
+﻿@model Loan
+    <a asp-controller="home" asp-action="index" class="btn btn-primary">Go Back</a>
+<div style="padding:10px">
+    <form asp-controller="loancalculator" asp-action="index">
+        <div class="form-group">
+            <label asp-for="@Model.loanAmount">Loan Amount</label>
+            <input type="number" asp-for="@Model.loanAmount" class="form-control" placeholder="Loan Amount" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="@Model.interest">Interest</label>
+            <input type="text" asp-for="@Model.interest" class="form-control" placeholder="Interest" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="@Model.years">Years</label>
+            <input type="text" asp-for="@Model.years" class="form-control" placeholder="Years" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="@Model.months">Months</label>
+            <input type="number" asp-for="@Model.months" class="form-control" placeholder="Months" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="@Model.emi">EMI</label>
+            <input type="text" asp-for="@Model.emi" class="form-control" value="@Model.emi" readonly="readonly" placeholder="EMI" />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+</div>

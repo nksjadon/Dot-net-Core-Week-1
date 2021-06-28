@@ -1,0 +1,34 @@
+﻿@model List<BankUser>
+<div style="padding:10px">
+    <a asp-controller="home" asp-action="index" class="btn btn-primary">Go Back</a>
+
+    <a asp-controller="bankadmin" asp-action="createuser" class="btn btn-dark">Add new account</a>
+    <div class="card-deck">
+        @foreach (var user in Model)
+        {
+            <div class="card m-3">
+                <div class="card-header">
+                    <h3>@user.userName</h3>
+
+                </div>
+                <div class="card-footer text-center">
+                    <h4>@user.userId</h4>
+                    <h4>@user.userName</h4>
+                    <h4>@user.userAccountNumber</h4>
+                    <h4>@user.userAccountBalance</h4>
+                    <h4>@user.userAddress</h4>
+                    <a asp-controller="bankadmin" asp-action="userdetail"
+                       asp-route-id="@user.userId" class="btn btn-primary">View</a>
+                    <a asp-controller="bankadmin" asp-action="modifyAccount"
+                       asp-route-id="@user.userId" class="btn btn-dark">Modify</a>
+
+                    <a asp-controller="bankadmin" asp-action="deleteAccount"
+                       asp-route-id="@user.userId" class="btn btn-danger">Delete</a>
+                </div>
+
+            </div>
+
+
+        }
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿@model List<Product>
+
+    <div style="padding:10px">
+        @*<h2>@ViewBag.random</h2>
+        @foreach (var prod in Model)
+        {
+            <ul>
+                <li>@prod.productId</li>
+                <li>@prod.productName</li>
+            </ul>
+
+        }*@
+        <h4>Dashboard for assignment week 1</h4>
+        <a asp-controller="bankadmin" asp-action="index" class="btn btn-outline-primary">Bank Admin</a>
+
+        <a asp-controller="loancalculator" asp-action="index" class="btn btn-dark">Loan Calculator</a>
+    </div>
+
